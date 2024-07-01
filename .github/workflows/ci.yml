@@ -37,7 +37,7 @@ jobs:
         shell: bash
 
   lint:
-    needs: setup
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -61,7 +61,7 @@ jobs:
         shell: bash
 
   test:
-    needs: setup
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
